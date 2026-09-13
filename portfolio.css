@@ -1,0 +1,36 @@
+body{ 
+    background-color: #ddd;
+    display:flex;
+    /* justify-content: ; */
+    /* padding: 20px; */
+}
+.right{
+    height: 100%;
+    width: 80%;
+    background-color: #111;
+    color: white;
+}
+.profile{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    display: block;
+    margin: auto; 
+    padding-top: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    color: brown;
+}
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -2rem;
+    
+}
+pre{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+}

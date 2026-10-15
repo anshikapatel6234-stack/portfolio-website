@@ -3,103 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <title>user input</title>
+    <style>
+        body{
+            background-image: url(https://img.magnific.com/free-photo/3d-wooden-table-looking-out-mountain-landscape_1048-8949.jpg?semt=ais_hybrid&w=740&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .text1{
+            font-family:'Times New Roman', Times, serif;
+            
+            font-size: 40px;
+            color:black;
+            text-decoration-line:underline;
+             text-decoration-style:wavy;
+             text-decoration-thickness:4px ;
+            text-decoration-color:brown;
+            /* text-align: center; */
+        }
+        button{
+            color: aliceblue;
+            background-color:rgb(159, 159, 7);
+        }
+        
+            
+        
+        p{
+            font-style: italic;
+            font-size: 50px;
+        }
+        .text2{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black;
+            font-size: 40px;
+            text-decoration-line:underline;
+             text-decoration-style:wavy;
+            text-decoration-color:brown ;
+        }
+        #heading{
+            font-family: 'Times New Roman', Times, serif;
+            color: chartreuse;
+        }
+        .text3{
+            font-family:monospace;
+            color: black;
+            font-size: 40px;
+            text-decoration-line: underline;
+            text-decoration-style:wavy;
+            text-decoration-thickness:4px ;
+            text-decoration-color: brown;
+        }
+        #notice{
+            color:chartreuse;
+            font-family: sans-serif;
+        }
+        .text4{
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 40px;
+            text-decoration-line:underline ;
+            text-decoration-style:wavy;
+            text-decoration-thickness:4px ;
+            text-decoration-color:brown ;
+       }
+       .sub{
+        color:chartreuse;
+        font-size: 35px;
+        font-weight: 900px;
+       }
+       #subjects{
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+
+       }
+       .text5{
+            color: black;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 40px;
+            text-decoration-line:underline ;
+            text-decoration-style:wavy;
+            text-decoration-thickness:4px ;
+            text-decoration-color:brown ;
+        }
+        #head{
+            color: navy;
+            background-color:cadetblue;
+        }
+
+
+        hr{
+            border: none;
+            height: 1px;
+            background-color:white;
+        }
+    </style>
 </head>
-<body>
-    
-    <div class="right">
-        <img src="https://images.unsplash.com/photo-1791391279415-fefa6e26f0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" class="profile">
-        <h2>CONTACT</h2>
-        <hr>
-        <p><b>Phone:</b><br>8439219635</p>
+<body id="page">
+    <h1 class="text1">1.Display User Input on the Webpage</h1>
+    <p id="output"></p>
+    <button onclick="enterusername()">enter name</button>
+    <!-- <p id="output"></p> -->
+    <hr>
+
+
+    <h1 class="text2">2.change text and style on button click</h1>
+     <h1 id="heading">welcome to the world of coding</h1> 
+
+    <button onclick="changeText()">Click here</button>
+    <hr>
+
+
+    <h1 class="text3">3.Remove an Element and update HTML</h1>
+    <p id="notice">Old Notice: Exam tomorrow.</p>
+
+   <div id="box"></div>
+
+   <button onclick="updateNotice()">Update Notice</button>
+   <hr>
+
+
+   <h1 class="text4">4.Toggle CSS class with a single button</h1>
+   <h2 class="sub">Subjects</h2>
+
+    <ul id="subjects">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+
+    <button onclick="addSubject()">Add Subject</button>
+<hr>
+
+
+     <h1 class="text5">5.Toggle CSS class with a single button </h1>
+      <h1 id="head">Hello Students</h1>
+
+    <button onclick="changeTheme()">Change Theme</button>
+
+
+
+    <script>
         
-        <p><b>Email:</b><br>anshikap918@gmail.com</p>
-        <p><b>Address:</b><br>Badaun</p>
-        <h2>SKILLS</h2><hr>
-        
-        <ul>
-            <li>Hard work</li>
-            <li>Communication skills</li>
-            <li>Verbal and written skills</li>
-            <li>Time management</li>
-        </ul>
-        <h2>HOBBIES</h2><hr>
-        <ul>
-            <Li>Reading book</Li>
-            <li>listen to music</li>
-            <li>Watching cartoons</li>
-            <li>cooking</li>
-        </ul>
-        <h2>LANGUAGE</h2><hr>
-        <ul>
-            <li>English</li>
-            <li>Hindi</li>
-        </ul>
-    </div>
-    <div class="left">
-        <h1>ANSHIKA PATEL</h1>
-        <h3><p>(Computer Science Undergraduate)</p></h3><br>
-        <pre>CAREER OBJECTIVE</pre> 
-        <hr>
-        <p>Motivated and enthusiastic BCA student with a strong interest in software development, data analytics, and emerging technologies. 
-        possess a good understanding of programming fundamental web development, database , and problem solving eager to apply technical
-         knowledge through real world project and internships while continously learning new technologies. seeking on opportunity to contribute
-          to a growth- oriented organistion and devlop a successful carre in the IT industry. </p>
+        function enterusername(){
+            let name =prompt("enter the name");
+            document.getElementById("output").innerHTML= " welcome to " + name;
+            output.style.color ="white";
+            output.style.background ="green";
+            page.style.background="yellow"
 
-        <br>
-        <pre>KEY SKILLS</pre>
-        <hr>
-        <ul>
-            <li><b>Data analytics:</b> Numpy, pandas, matplotlib</li><br>
-            <li><b>Programming:</b> python, java, c</li><br>
-            <li><b>Database:</b>SQL and basic database management</li><br>
-            <li><b>Web technologies:</b>HTML, CSS, javascripts</li><br>
-            <li><b>Core concept</b>oops, data structure, algorithms, computer network</li><br>
-            <li><b>Tools:</b>VS code, turbo C/C++, github</li><br>
-            <li><b>Soft skills:</b>
-            <ul>
-                <li>Problem sloving</li>
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>Time management</li>
-                <li></li>
-            </ul></li>
-            <li>Report writting & Presentation</li>
-        </ul>
-        <pre>EDUCATION</pre>
-        <hr>
-        <table border="1">
-            <tr>
-                <th>Course</th>
-                <th>school/college</th>
-                <th>passing year</th>
-
-            </tr>
-            <tr>
-                <td>BCA</td>
-                <td>BIMT</td>
-                <td>pursuing</td>            
-            </tr>
-            <tr>
-                <td>12th</td>
-                <td>KNMICB</td>
-                <td>2024</td>
-
-            </tr>
-            <tr>
-                <td>10th</td>
-                <td>KNMICB</td>
-                <td>2022</td>
-            </tr>
-        </table>
+        }
+        function changeText() {
+            let h = document.getElementById("heading");
         
 
-    </div>
+            h.textContent = "you don't just teach us coding. you inspire us to think creatively,solve problem,and turn our dreams into reality. ";
+            h.style.color = "blue";
+            h.style.backgroundColor = "yellow";
+            page.style.backgroundColor = "aqua"
+        } 
+        
+    function updateNotice() {
+        document.getElementById("notice").remove();
+
+        document.getElementById("box").innerHTML =
+            "<h3>New Notice: Holiday Tomorrow</h3>";
+    }
+
+     function addSubject() {
+            let li = document.createElement("li");
+
+            li.textContent = "JavaScript";
+
+            document.getElementById("subjects").appendChild(li);
+     }
+
+      function changeTheme() {
+            document.getElementById("head")
+                .classList.toggle("highlight");
+        }
+
 
         
 
 
-    </div>
+    </script>
 </body>
 </html>
